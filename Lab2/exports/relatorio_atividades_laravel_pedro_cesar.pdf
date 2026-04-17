@@ -1,0 +1,477 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+2 0 obj
+<< /Length 2025 >>
+stream
+BT /F1 10 Tf 50 790 Td
+(RELATORIO - ATIVIDADES LARAVEL) Tj
+0 -13 Td
+(Aluno: pedro cesar) Tj
+0 -13 Td
+(Matricula: 04180660) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(PROJETO) Tj
+0 -13 Td
+(O projeto Laravel foi criado na pasta app/ e usa banco SQLite em) Tj
+0 -13 Td
+(app/database/database.sqlite.) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(COMANDOS PRINCIPAIS USADOS) Tj
+0 -13 Td
+(php app/artisan migrate) Tj
+0 -13 Td
+(php app/artisan db:show) Tj
+0 -13 Td
+(php app/artisan tinker) Tj
+0 -13 Td
+(php app/artisan db:seed) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(ATIVIDADE 1 - MIGRATIONS, MODELS E TINKER) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(1\) Migration da tabela produtos) Tj
+0 -13 Td
+(Arquivo: app/database/migrations/2026_04_17_165952_create_produtos_table.php) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(public function up\(\): void) Tj
+0 -13 Td
+({) Tj
+0 -13 Td
+(    Schema::create\('produtos', function \(Blueprint $table\) {) Tj
+0 -13 Td
+(        $table->id\(\);) Tj
+0 -13 Td
+(        $table->string\('nome'\);) Tj
+0 -13 Td
+(        $table->decimal\('preco', 8, 2\);) Tj
+0 -13 Td
+(        $table->integer\('quantidade'\);) Tj
+0 -13 Td
+(        $table->timestamps\(\);) Tj
+0 -13 Td
+(    }\);) Tj
+0 -13 Td
+(}) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(2\) Model Produto) Tj
+0 -13 Td
+(Arquivo: app/app/Models/Produto.php) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(<?php) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(namespace App\\Models;) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(use Illuminate\\Database\\Eloquent\\Factories\\HasFactory;) Tj
+0 -13 Td
+(use Illuminate\\Database\\Eloquent\\Model;) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(class Produto extends Model) Tj
+0 -13 Td
+({) Tj
+0 -13 Td
+(    use HasFactory;) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(    protected $fillable = ['nome', 'preco', 'quantidade'];) Tj
+0 -13 Td
+(}) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(3\) Comando Tinker para inserir produto) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(\\App\\Models\\Produto::create\([) Tj
+0 -13 Td
+(    'nome' => 'Teclado Gamer',) Tj
+0 -13 Td
+(    'preco' => 299.99,) Tj
+0 -13 Td
+(    'quantidade' => 10) Tj
+0 -13 Td
+(]\);) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(\\App\\Models\\Produto::all\(\);) Tj
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 10 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+endobj
+4 0 obj
+<< /Length 1834 >>
+stream
+BT /F1 10 Tf 50 790 Td
+() Tj
+0 -13 Td
+(4\) Migration da tabela clientes) Tj
+0 -13 Td
+(Arquivo: app/database/migrations/2026_04_17_170807_create_clientes_table.php) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(public function up\(\): void) Tj
+0 -13 Td
+({) Tj
+0 -13 Td
+(    Schema::create\('clientes', function \(Blueprint $table\) {) Tj
+0 -13 Td
+(        $table->id\(\);) Tj
+0 -13 Td
+(        $table->string\('nome'\);) Tj
+0 -13 Td
+(        $table->string\('matricula'\);) Tj
+0 -13 Td
+(        $table->timestamps\(\);) Tj
+0 -13 Td
+(    }\);) Tj
+0 -13 Td
+(}) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(5\) Model Cliente) Tj
+0 -13 Td
+(Arquivo: app/app/Models/Cliente.php) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(<?php) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(namespace App\\Models;) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(use Illuminate\\Database\\Eloquent\\Factories\\HasFactory;) Tj
+0 -13 Td
+(use Illuminate\\Database\\Eloquent\\Model;) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(class Cliente extends Model) Tj
+0 -13 Td
+({) Tj
+0 -13 Td
+(    use HasFactory;) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(    protected $fillable = ['nome', 'matricula'];) Tj
+0 -13 Td
+(}) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(6\) Comando Tinker para inserir cliente) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(\\App\\Models\\Cliente::create\([) Tj
+0 -13 Td
+(    'nome' => 'pedro cesar',) Tj
+0 -13 Td
+(    'matricula' => '04180660') Tj
+0 -13 Td
+(]\);) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(\\App\\Models\\Cliente::all\(\);) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(RESULTADO - TABELAS CRIADAS NO BANCO) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(SQLite 3.51.1) Tj
+0 -13 Td
+(Database: database/database.sqlite) Tj
+0 -13 Td
+(Tables: 11) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(Tabelas principais:) Tj
+0 -13 Td
+(- clientes) Tj
+0 -13 Td
+(- produtos) Tj
+0 -13 Td
+(- users) Tj
+0 -13 Td
+(- sessions) Tj
+0 -13 Td
+(- cache) Tj
+0 -13 Td
+(- jobs) Tj
+0 -13 Td
+(- migrations) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(RESULTADO DO TINKER - CLIENTES) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 10 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 2106 >>
+stream
+BT /F1 10 Tf 50 790 Td
+() Tj
+0 -13 Td
+(array:1 [) Tj
+0 -13 Td
+(  0 => array:3 [) Tj
+0 -13 Td
+(    "id" => 1) Tj
+0 -13 Td
+(    "nome" => "pedro cesar") Tj
+0 -13 Td
+(    "matricula" => "04180660") Tj
+0 -13 Td
+(  ]) Tj
+0 -13 Td
+(]) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(RESULTADO DO TINKER - PRODUTOS) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(array:7 [) Tj
+0 -13 Td
+(  0 => [id: 1, nome: Caderno, preco: 12.5, quantidade: 5]) Tj
+0 -13 Td
+(  1 => [id: 2, nome: Teclado Gamer, preco: 299.99, quantidade: 10]) Tj
+0 -13 Td
+(  2 => [id: 3, nome: Mouse Gamer, preco: 149.9, quantidade: 12]) Tj
+0 -13 Td
+(  3 => [id: 4, nome: Monitor LED, preco: 899.99, quantidade: 4]) Tj
+0 -13 Td
+(  4 => [id: 5, nome: Headset, preco: 199.9, quantidade: 8]) Tj
+0 -13 Td
+(  5 => [id: 6, nome: Webcam HD, preco: 249.5, quantidade: 6]) Tj
+0 -13 Td
+(  6 => [id: 7, nome: Notebook, preco: 3499.99, quantidade: 2]) Tj
+0 -13 Td
+(]) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(ATIVIDADE 2 - FACTORIES E SEEDERS) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(1\) UserFactory) Tj
+0 -13 Td
+(Arquivo: app/database/factories/UserFactory.php) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(A factory gera usuarios falsos usando Faker:) Tj
+0 -13 Td
+(- name: nome falso) Tj
+0 -13 Td
+(- email: email falso e unico) Tj
+0 -13 Td
+(- email_verified_at: now\(\)) Tj
+0 -13 Td
+(- password: Hash::make\('12345678'\)) Tj
+0 -13 Td
+(- remember_token: Str::random\(10\)) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(2\) UserSeeder) Tj
+0 -13 Td
+(Arquivo: app/database/seeders/UserSeeder.php) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(<?php) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(namespace Database\\Seeders;) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(use App\\Models\\User;) Tj
+0 -13 Td
+(use Illuminate\\Database\\Seeder;) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(class UserSeeder extends Seeder) Tj
+0 -13 Td
+({) Tj
+0 -13 Td
+(    public function run\(\): void) Tj
+0 -13 Td
+(    {) Tj
+0 -13 Td
+(        User::factory\(\)->count\(10\)->create\(\);) Tj
+0 -13 Td
+(    }) Tj
+0 -13 Td
+(}) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(3\) ProdutoSeeder) Tj
+0 -13 Td
+(Arquivo: app/database/seeders/ProdutoSeeder.php) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(Foram criados 5 produtos:) Tj
+0 -13 Td
+(- Mouse Gamer - 149.90 - quantidade 12) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 10 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 1369 >>
+stream
+BT /F1 10 Tf 50 790 Td
+(- Monitor LED - 899.99 - quantidade 4) Tj
+0 -13 Td
+(- Headset - 199.90 - quantidade 8) Tj
+0 -13 Td
+(- Webcam HD - 249.50 - quantidade 6) Tj
+0 -13 Td
+(- Notebook - 3499.99 - quantidade 2) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(4\) DatabaseSeeder) Tj
+0 -13 Td
+(Arquivo: app/database/seeders/DatabaseSeeder.php) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(public function run\(\): void) Tj
+0 -13 Td
+({) Tj
+0 -13 Td
+(    $this->call\([) Tj
+0 -13 Td
+(        UserSeeder::class,) Tj
+0 -13 Td
+(        ProdutoSeeder::class,) Tj
+0 -13 Td
+(    ]\);) Tj
+0 -13 Td
+(}) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(5\) Comando para executar os seeders) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(php app/artisan db:seed) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(RESULTADO DO TINKER - USUARIOS) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(Comando:) Tj
+0 -13 Td
+(\\App\\Models\\User::count\(\);) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(Resultado:) Tj
+0 -13 Td
+(Usuarios: 10) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(Comando:) Tj
+0 -13 Td
+(\\App\\Models\\User::all\(\);) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(Foram gerados 10 usuarios ficticios com Faker, contendo id, name e email.) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(CONCLUSAO) Tj
+0 -13 Td
+() Tj
+0 -13 Td
+(As atividades demonstraram como criar tabelas com migrations, mapear tabelas com models) Tj
+0 -13 Td
+(Eloquent, inserir e visualizar dados usando Tinker, e popular tabelas automaticamente com) Tj
+0 -13 Td
+(factories e seeders.) Tj
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 10 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Type /Pages /Count 4 /Kids [3 0 R 5 0 R 7 0 R 9 0 R] >>
+endobj
+11 0 obj
+<< /Type /Catalog /Pages 10 0 R >>
+endobj
+xref
+0 12
+0000000000 65535 f 
+0000000009 00000 n 
+0000000077 00000 n 
+0000002154 00000 n 
+0000002281 00000 n 
+0000004167 00000 n 
+0000004294 00000 n 
+0000006452 00000 n 
+0000006579 00000 n 
+0000008000 00000 n 
+0000008127 00000 n 
+0000008203 00000 n 
+trailer
+<< /Size 12 /Root 11 0 R >>
+startxref
+8254
+%%EOF
